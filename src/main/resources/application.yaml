@@ -1,0 +1,21 @@
+server:
+  port: 8080
+application:
+  blockchain:
+    contracts:
+      broadcast:
+        address: "0xd786bc846b0d97666a46ba03f37650d96b51f476"
+      oracle:
+        address: "0x650cdc39b895bde686a1043e3914f31faaf5e6bd"
+    private-key: "0x5eb814dcbf397eedd371b2d72db9429fe3c48b32a0bf3cd4715a5f311f83d3e6"
+    connection-url: http://127.0.0.1:7545
+    gas-price: 20000000000
+    gas-limit: 6721975
+  api:
+    youtube-api-key: "Add yours here"
+
+logging:
+  level:
+    root: INFO  # Default logging level for the entire application
+    org.springframework.web: DEBUG  # Logging level for Spring's web components
+    me.pierrontmaxi.memoire.bscl: DEBUG  # Logging level for your package

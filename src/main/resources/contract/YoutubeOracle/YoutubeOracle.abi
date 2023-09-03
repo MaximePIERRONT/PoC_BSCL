@@ -1,0 +1,96 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_broadcastId",
+				"type": "uint256"
+			}
+		],
+		"name": "NewYoutubeRequest",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "broadcastContract",
+		"outputs": [
+			{
+				"internalType": "contract IBroadcastContract",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_broadcastId",
+				"type": "uint256"
+			}
+		],
+		"name": "fetchVideoViews",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_broadcastId",
+				"type": "uint256"
+			}
+		],
+		"name": "getBroadcastById",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_broadcastContractAddress",
+				"type": "address"
+			}
+		],
+		"name": "setBroadcastContractAddress",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_broadcastId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_views",
+				"type": "uint256"
+			}
+		],
+		"name": "setVideoViews",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
