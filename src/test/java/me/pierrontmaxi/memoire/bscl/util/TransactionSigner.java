@@ -1,4 +1,4 @@
-package me.pierrontmaxi.memoire.bscl;
+package me.pierrontmaxi.memoire.bscl.util;
 
 import org.json.JSONObject;
 import org.web3j.crypto.Credentials;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class TransactionSigner {
     public static void main(String[] args) {
-        String privateKey = "0xd32b6d05a505b731d714bd184aa0699cf07d2e3f0e91fdcb63de4faa7bc0062c";
+        String privateKey = "0xfc09ef338b1452562c9f203e33d337728de24d18b9ee21ddbeceb7fc822a7725";
         Credentials credentials = Credentials.create(privateKey);
         JSONObject rawTransactionJson = readJsonFromFileRawTransaction();
         org.web3j.crypto.RawTransaction rawTransaction = org.web3j.crypto.RawTransaction.createTransaction(

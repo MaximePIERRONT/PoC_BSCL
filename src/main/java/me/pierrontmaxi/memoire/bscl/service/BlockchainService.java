@@ -58,6 +58,7 @@ public class BlockchainService {
                 this.setBroadcastContractAddressOnOracleContract(broadcastContractAddress);
                 Logger.getLogger(BlockchainService.class.getName()).warning("You should update the application.properties file with the new contract addresses");
                 Logger.getLogger(BlockchainService.class.getName()).warning("And restart the application");
+                System.exit(0);
             }
         }
     }

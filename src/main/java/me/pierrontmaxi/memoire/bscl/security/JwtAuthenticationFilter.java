@@ -27,7 +27,7 @@ import java.util.List;
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    private final RSAPublicKey publicKey;  // Initialisez ceci avec votre clé publique
+    private final RSAPublicKey publicKey;
 
     public JwtAuthenticationFilter() throws Exception {
         this.publicKey = (RSAPublicKey) JwtService.loadPublicKeyFromResource();
@@ -47,7 +47,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         try {
             Algorithm algorithm = Algorithm.RSA256(publicKey, null);
             JWTVerifier verifier = JWT.require(algorithm)
-                    .withIssuer("your-app-name")  // Remplacez par votre propre émetteur si vous en utilisez un
+                    .withIssuer("your-app-name")
                     .build();
 
             DecodedJWT jwt = verifier.verify(token);

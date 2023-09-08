@@ -36,7 +36,8 @@ public class Resource {
 
     @PostConstruct
     public void init() {
-        contract = BroadcastContract.load(broadcastContractAddress, this.getWeb3j(), Credentials.create(privateKey), new StaticGasProvider(gasPrice, gasLimit));
+        if (!(contractAddress.equals("0x") || contractAddress.isEmpty()))
+            contract = BroadcastContract.load(broadcastContractAddress, this.getWeb3j(), Credentials.create(privateKey), new StaticGasProvider(gasPrice, gasLimit));
     }
 
     public Web3j getWeb3j() {

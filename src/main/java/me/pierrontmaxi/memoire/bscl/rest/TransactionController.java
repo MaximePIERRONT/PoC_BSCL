@@ -1,8 +1,7 @@
 package me.pierrontmaxi.memoire.bscl.rest;
 
-import me.pierrontmaxi.memoire.bscl.rest.port.TransactionResponse;
+import me.pierrontmaxi.memoire.bscl.rest.port.output.TransactionResponse;
 import me.pierrontmaxi.memoire.bscl.service.TransactionService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +18,7 @@ public class TransactionController {
         this.transactionService = transactionService;
     }
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(consumes = MediaType.TEXT_PLAIN_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public TransactionResponse send(@RequestBody String rawTransaction) {
         return transactionService.processTransaction(rawTransaction);
     }
