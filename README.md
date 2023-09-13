@@ -1,5 +1,5 @@
 ---
-title: "Blockchain Sharing Content Livestreaming (BSCL) - Proof of Concept (PoC)"
+# "Blockchain Sharing Content Livestreaming (BSCL) - Proof of Concept (PoC)"
 ---
 
 ## Introduction
