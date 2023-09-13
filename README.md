@@ -1,6 +1,5 @@
 ---
 title: "Blockchain Sharing Content Livestreaming (BSCL) - Proof of Concept (PoC)"
-output: html_document
 ---
 
 ## Introduction
