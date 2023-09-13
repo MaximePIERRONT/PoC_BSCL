@@ -4,10 +4,10 @@ application:
   blockchain:
     contracts:
       broadcast:
-        address: "0xd786bc846b0d97666a46ba03f37650d96b51f476"
+        address: "0x17c2b50af519f30f021930af4f2a078e3fb9afe3"
       oracle:
-        address: "0x650cdc39b895bde686a1043e3914f31faaf5e6bd"
-    private-key: "0x5eb814dcbf397eedd371b2d72db9429fe3c48b32a0bf3cd4715a5f311f83d3e6"
+        address: "0x93ed2812b59001c4f019e32572526fa478383e28"
+    private-key: "0xd993761170cf40a6e4a515968b6f47a15978d80fb57e74213c3c7c06d6e9b68a"
     connection-url: http://127.0.0.1:7545
     gas-price: 20000000000
     gas-limit: 6721975

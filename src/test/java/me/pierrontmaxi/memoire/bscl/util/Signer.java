@@ -1,4 +1,4 @@
-package me.pierrontmaxi.memoire.bscl;
+package me.pierrontmaxi.memoire.bscl.util;
 
 import org.web3j.crypto.Credentials;
 import org.web3j.crypto.Hash;
@@ -10,14 +10,15 @@ import java.nio.charset.StandardCharsets;
 public class Signer {
 
     public static void main(String[] args) {
-        String privateKey = "0xd32b6d05a505b731d714bd184aa0699cf07d2e3f0e91fdcb63de4faa7bc0062c"; // Wallet password
+        String privateKey = "0xfc09ef338b1452562c9f203e33d337728de24d18b9ee21ddbeceb7fc822a7725"; // Wallet password
+        String nonce = "4cda5793-8a51-47b6-84b8-8e214a93d026";
+        getSignNonce(privateKey, nonce);
+    }
 
+    public static String getSignNonce(String privateKey, String nonce) {
         try {
             // Load Ethereum credentials (i.e., the private key)
             Credentials credentials = Credentials.create(privateKey);
-
-            // Nonce or message you want to sign
-            String nonce = "5b771ea9-5ecd-433f-82ad-b34d98504b5f";
 
             // Convert the nonce/message to a SHA3 hash
             byte[] messageHash = Hash.sha3(nonce.getBytes(StandardCharsets.UTF_8));
@@ -34,9 +35,11 @@ public class Signer {
 
 
             System.out.println("Signature: " + signatureString);
+            return signatureString;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 }
 

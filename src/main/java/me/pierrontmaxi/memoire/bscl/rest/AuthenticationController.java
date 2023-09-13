@@ -30,7 +30,7 @@ public class AuthenticationController {
             String token = jwtService.issueToken(address);
             return ResponseEntity.ok(token);
         } else {
-            return ResponseEntity.status(401).body("Invalid signature");
+            return ResponseEntity.status(406).body("Invalid signature");
         }
     }
 }

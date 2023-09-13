@@ -31,10 +31,8 @@ import static me.pierrontmaxi.memoire.bscl.domain.contract.BroadcastContract.*;
 public class ContentResource extends Resource {
 
     @GetMapping
-    public List<ContentOutput> list() throws Exception {
-        List contents = contract.getContents().send();
-        //return contents.stream().map(ContentOutput::new).toList();
-        return null;
+    public List<Content> list() throws Exception {
+        return contract.getContents().send();
     }
 
     @GetMapping("/{id}")

@@ -1,4 +1,4 @@
-package me.pierrontmaxi.memoire.bscl.rest.port;
+package me.pierrontmaxi.memoire.bscl.rest.port.output;
 
 import java.math.BigInteger;
 

@@ -47,13 +47,15 @@ public class YoutubeOracleService {
     public void onStartup() {
         Web3j web3j = Web3j.build(new HttpService(connectionUrl));
         Credentials credentials = Credentials.create(privateKey);
-        youtubeOracleContract = YoutubeOracleContract.load(
-                oracleAddress,
-                web3j,
-                credentials,
-                new StaticGasProvider(gasPrice, gasLimit)
-        );
-        listenToNewYoutubeRequests();
+        if (!(oracleAddress.equals("0x") || oracleAddress.isEmpty())) {
+            youtubeOracleContract = YoutubeOracleContract.load(
+                    oracleAddress,
+                    web3j,
+                    credentials,
+                    new StaticGasProvider(gasPrice, gasLimit)
+            );
+            listenToNewYoutubeRequests();
+        }
     }
 
     private void listenToNewYoutubeRequests() {

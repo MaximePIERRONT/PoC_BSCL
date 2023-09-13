@@ -3,7 +3,7 @@ package me.pierrontmaxi.memoire.bscl.service;
 import jakarta.annotation.PostConstruct;
 import me.pierrontmaxi.memoire.bscl.domain.RawTransaction;
 import me.pierrontmaxi.memoire.bscl.rest.Resource;
-import me.pierrontmaxi.memoire.bscl.rest.port.TransactionResponse;
+import me.pierrontmaxi.memoire.bscl.rest.port.output.TransactionResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.web3j.abi.FunctionEncoder;
